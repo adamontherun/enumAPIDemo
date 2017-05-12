@@ -1,0 +1,6 @@
+framework module Pods_Endpoint {
+  umbrella header "Pods-Endpoint-umbrella.h"
+
+  export *
+  module * { export * }
+}
