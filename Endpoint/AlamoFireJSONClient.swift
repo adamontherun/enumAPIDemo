@@ -12,6 +12,7 @@ import Alamofire
 /// The Reponse type from Alamofire is Any
 typealias AlamofireJSONCompletionHandler = (Result<Any>)->()
 
+/// Used to connect to any JSON API that is modeled by an AlamofireEndpoint
 enum AlamoFireJSONClient {
     
     static func makeAPICall(to endPoint: AlamofireEndPoint, completionHandler:@escaping AlamofireJSONCompletionHandler) {
