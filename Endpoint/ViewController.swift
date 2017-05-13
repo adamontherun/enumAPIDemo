@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        PlanetsJSONClient.fetchPlanets { (result) in
+            switch result {
+            case .success(let json):
+                print(json)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 

@@ -13,6 +13,13 @@
 		66A6E33B1EC54AED00FB9C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A6E3391EC54AED00FB9C33 /* Main.storyboard */; };
 		66A6E33D1EC54AED00FB9C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A6E33C1EC54AED00FB9C33 /* Assets.xcassets */; };
 		66A6E3401EC54AED00FB9C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A6E33E1EC54AED00FB9C33 /* LaunchScreen.storyboard */; };
+		66A6E3481EC54CAD00FB9C33 /* PlanetEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6E3471EC54CAD00FB9C33 /* PlanetEndPoint.swift */; };
+		66A6E34A1EC550A300FB9C33 /* PlanetsJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6E3491EC550A300FB9C33 /* PlanetsJSONClient.swift */; };
+		66A6E34C1EC5510300FB9C33 /* AlamoFireJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6E34B1EC5510300FB9C33 /* AlamoFireJSONClient.swift */; };
+		66A6E34E1EC5516B00FB9C33 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6E34D1EC5516B00FB9C33 /* Result.swift */; };
+		66A6E3501EC5596D00FB9C33 /* AlamofireEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6E34F1EC5596D00FB9C33 /* AlamofireEndPoint.swift */; };
+		66DA77691EC6FB5E00781CBF /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA77681EC6FB5E00781CBF /* NetworkingError.swift */; };
+		66DA776B1EC777F300781CBF /* StarwarsJSONClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA776A1EC777F300781CBF /* StarwarsJSONClientProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		66A6E33C1EC54AED00FB9C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A6E33F1EC54AED00FB9C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66A6E3411EC54AED00FB9C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A6E3471EC54CAD00FB9C33 /* PlanetEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetEndPoint.swift; sourceTree = "<group>"; };
+		66A6E3491EC550A300FB9C33 /* PlanetsJSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsJSONClient.swift; sourceTree = "<group>"; };
+		66A6E34B1EC5510300FB9C33 /* AlamoFireJSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoFireJSONClient.swift; sourceTree = "<group>"; };
+		66A6E34D1EC5516B00FB9C33 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		66A6E34F1EC5596D00FB9C33 /* AlamofireEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireEndPoint.swift; sourceTree = "<group>"; };
+		66DA77681EC6FB5E00781CBF /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		66DA776A1EC777F300781CBF /* StarwarsJSONClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarwarsJSONClientProtocol.swift; sourceTree = "<group>"; };
 		8550CF4A796BB67D253E4347 /* Pods-Endpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Endpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Endpoint/Pods-Endpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		91CCE269F88051898C40D19D /* Pods_Endpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Endpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +75,69 @@
 		66A6E3341EC54AED00FB9C33 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
-				66A6E3351EC54AED00FB9C33 /* AppDelegate.swift */,
-				66A6E3371EC54AED00FB9C33 /* ViewController.swift */,
-				66A6E3391EC54AED00FB9C33 /* Main.storyboard */,
-				66A6E33C1EC54AED00FB9C33 /* Assets.xcassets */,
-				66A6E33E1EC54AED00FB9C33 /* LaunchScreen.storyboard */,
-				66A6E3411EC54AED00FB9C33 /* Info.plist */,
+				66DA77621EC6EC8600781CBF /* Supporting */,
+				66DA77611EC6EC6400781CBF /* Networking */,
+				66DA77631EC6EC8E00781CBF /* UI */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		66DA77611EC6EC6400781CBF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				66DA77641EC6EDEA00781CBF /* Alamofire */,
+				66DA77651EC6EDF300781CBF /* StarWars */,
+				66DA77681EC6FB5E00781CBF /* NetworkingError.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		66DA77621EC6EC8600781CBF /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				66A6E3351EC54AED00FB9C33 /* AppDelegate.swift */,
+				66A6E33C1EC54AED00FB9C33 /* Assets.xcassets */,
+				66A6E3411EC54AED00FB9C33 /* Info.plist */,
+				66A6E33E1EC54AED00FB9C33 /* LaunchScreen.storyboard */,
+				66A6E34D1EC5516B00FB9C33 /* Result.swift */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		66DA77631EC6EC8E00781CBF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				66A6E3371EC54AED00FB9C33 /* ViewController.swift */,
+				66A6E3391EC54AED00FB9C33 /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		66DA77641EC6EDEA00781CBF /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				66A6E34F1EC5596D00FB9C33 /* AlamofireEndPoint.swift */,
+				66A6E34B1EC5510300FB9C33 /* AlamoFireJSONClient.swift */,
+			);
+			name = Alamofire;
+			sourceTree = "<group>";
+		};
+		66DA77651EC6EDF300781CBF /* StarWars */ = {
+			isa = PBXGroup;
+			children = (
+				66DA776C1EC7784500781CBF /* Planets */,
+				66DA776A1EC777F300781CBF /* StarwarsJSONClientProtocol.swift */,
+			);
+			name = StarWars;
+			sourceTree = "<group>";
+		};
+		66DA776C1EC7784500781CBF /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				66A6E3471EC54CAD00FB9C33 /* PlanetEndPoint.swift */,
+				66A6E3491EC550A300FB9C33 /* PlanetsJSONClient.swift */,
+			);
+			name = Planets;
 			sourceTree = "<group>";
 		};
 		737BA1B1CFC8A7DC99C4CB74 /* Frameworks */ = {
@@ -212,8 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A6E34E1EC5516B00FB9C33 /* Result.swift in Sources */,
 				66A6E3381EC54AED00FB9C33 /* ViewController.swift in Sources */,
+				66A6E3481EC54CAD00FB9C33 /* PlanetEndPoint.swift in Sources */,
 				66A6E3361EC54AED00FB9C33 /* AppDelegate.swift in Sources */,
+				66DA77691EC6FB5E00781CBF /* NetworkingError.swift in Sources */,
+				66DA776B1EC777F300781CBF /* StarwarsJSONClientProtocol.swift in Sources */,
+				66A6E34C1EC5510300FB9C33 /* AlamoFireJSONClient.swift in Sources */,
+				66A6E3501EC5596D00FB9C33 /* AlamofireEndPoint.swift in Sources */,
+				66A6E34A1EC550A300FB9C33 /* PlanetsJSONClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +457,7 @@
 				66A6E3461EC54AED00FB9C33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
